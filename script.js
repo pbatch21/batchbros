@@ -17,38 +17,39 @@ document.addEventListener("keydown", (event) => {
     player.style.left = playerX + "px";
 });
 
-// Function to create falling objects
-function createFallingObject() {
+// Function to create falling crystal gems
+function createFallingGem() {
     if (gameOver) return;
 
-    const obj = document.createElement("div");
-    obj.classList.add("falling-object");
-    obj.style.left = Math.random() * 370 + "px"; // Random start position
-    gameContainer.appendChild(obj);
+    const gem = document.createElement("img");
+    gem.src = "assets/crystal.webp"; // Make sure the path is correct
+    gem.classList.add("falling-gem");
+    gem.style.left = Math.random() * 370 + "px"; // Random start position
+    gameContainer.appendChild(gem);
 
     let fallSpeed = 5;
-    let objInterval = setInterval(() => {
-        let objTop = parseInt(obj.style.top || "0");
-        obj.style.top = objTop + fallSpeed + "px";
+    let gemInterval = setInterval(() => {
+        let gemTop = parseInt(gem.style.top || "0");
+        gem.style.top = gemTop + fallSpeed + "px";
 
         // Collision detection
-        if (objTop >= 450 && objTop <= 500) {
-            let objX = parseInt(obj.style.left);
-            if (objX < playerX + 50 && objX + 30 > playerX) {
+        if (gemTop >= 450 && gemTop <= 500) {
+            let gemX = parseInt(gem.style.left);
+            if (gemX < playerX + 50 && gemX + 30 > playerX) {
                 endGame();
             }
         }
 
-        // Remove object if it falls out of screen
-        if (objTop > 500) {
-            clearInterval(objInterval);
-            gameContainer.removeChild(obj);
+        // Remove gem if it falls out of screen
+        if (gemTop > 500) {
+            clearInterval(gemInterval);
+            gameContainer.removeChild(gem);
             score++;
             scoreDisplay.textContent = `Score: ${score}`;
         }
     }, 30);
 
-    setTimeout(createFallingObject, Math.random() * 1000 + 500); // New object every 0.5-1.5 sec
+    setTimeout(createFallingGem, Math.random() * 1000 + 500); // New gem every 0.5-1.5 sec
 }
 
 // End game function
@@ -59,4 +60,4 @@ function endGame() {
 }
 
 // Start the game
-createFallingObject();
+createFallingGem();
