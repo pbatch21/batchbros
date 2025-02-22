@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #282c34;
+    color: white;
+    margin: 0;
+}
+
+#game-container {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background-color: black;
+    margin: 20px auto;
+    border: 2px solid white;
+    overflow: hidden;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    bottom: 10px;
+    left: 175px; /* Start in center */
+}
+
+.falling-object {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+}
