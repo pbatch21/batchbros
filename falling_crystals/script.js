@@ -127,7 +127,7 @@ function endGame() {
 if (backBtn) {
     backBtn.addEventListener("click", () => {
         console.log("Back button clicked!");
-        window.location.href = "../welcome.html"; // Adjust if necessary
+        window.location.href = "../index.html"; // Adjust if necessary
     });
 } else {
     console.error("Back button not found! Check ID.");
