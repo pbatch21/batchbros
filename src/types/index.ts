@@ -4,19 +4,42 @@ export interface Game {
   description: string;
   imageUrl: string;
   gameUrl: string;
-  category: 'pauls' | 'wills';
+  category: string;
   tags: string[];
   featured: boolean;
   createdAt: Date;
   updatedAt: Date;
   plays: number;
   rating: number;
-  controls?: {
+  controls: {
     keyboard?: string[];
     mouse?: string[];
     touch?: string[];
   };
-  instructions?: string;
+  instructions: string;
+}
+
+export interface GameScore {
+  id: string;
+  gameId: string;
+  gameTitle: string;
+  userId: string;
+  userName: string;
+  userPhotoURL?: string;
+  score: number;
+  timestamp: Date;
+}
+
+export interface UserProfile {
+  uid: string;
+  name: string;
+  email: string;
+  photoURL?: string;
+  createdAt: string;
+  games: string[];
+  favorites: string[];
+  totalScore?: number;
+  gamesPlayed?: number;
 }
 
 export interface User {

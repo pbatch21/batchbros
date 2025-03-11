@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { FaGamepad, FaBars, FaTimes, FaUser } from 'react-icons/fa';
+import { FaGamepad, FaBars, FaTimes, FaUser, FaTrophy } from 'react-icons/fa';
 import { useAuth } from '@/context/AuthContext';
 import Button from '@/components/ui/Button';
 
@@ -85,6 +85,17 @@ export default function Navbar() {
                 }`}
               >
                 Will's Games
+              </Link>
+              <Link
+                href="/leaderboard"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                  isActive('/leaderboard') 
+                    ? 'border-blue-500 text-gray-900' 
+                    : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                }`}
+              >
+                <FaTrophy className="mr-1 h-4 w-4" />
+                Leaderboard
               </Link>
             </div>
           </div>
@@ -190,6 +201,20 @@ export default function Navbar() {
             onClick={closeMenu}
           >
             Will's Games
+          </Link>
+          <Link
+            href="/leaderboard"
+            className={`block pl-3 pr-4 py-2 border-l-4 text-base font-medium ${
+              isActive('/leaderboard') 
+                ? 'bg-blue-50 border-blue-500 text-blue-700' 
+                : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
+            }`}
+            onClick={closeMenu}
+          >
+            <div className="flex items-center">
+              <FaTrophy className="mr-2 h-4 w-4" />
+              Leaderboard
+            </div>
           </Link>
         </div>
         <div className="pt-4 pb-3 border-t border-gray-200">
