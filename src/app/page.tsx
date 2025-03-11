@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Link from "next/link";
 import { FaGamepad, FaArrowRight } from "react-icons/fa";
 import Button from "@/components/ui/Button";
