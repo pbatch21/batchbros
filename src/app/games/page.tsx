@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 // Force dynamic rendering for this page
 export const dynamic = 'force-dynamic';
-export const runtime = 'nodejs';
 
 // This is a server component that will fetch data at request time
 export default async function GamesPage({

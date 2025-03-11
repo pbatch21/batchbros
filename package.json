@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "build:netlify": "NEXT_PUBLIC_FIREBASE_API_KEY=dummy-key-for-build NODE_ENV=production next build --config netlify.next.config.js",
+    "build:netlify": "NEXT_PUBLIC_FIREBASE_API_KEY=dummy-key-for-build NODE_ENV=production next build",
     "start": "next start",
     "lint": "next lint"
   },
