@@ -18,16 +18,30 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
-const auth = getAuth(app);
-const db = getFirestore(app);
-const storage = getStorage(app);
-
-// Initialize Analytics only on client side
+// Initialize Firebase with error handling
+let app;
+let auth;
+let db;
+let storage;
 let analytics = null;
-if (typeof window !== 'undefined') {
-  analytics = getAnalytics(app);
+
+try {
+  app = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
+  auth = getAuth(app);
+  db = getFirestore(app);
+  storage = getStorage(app);
+  
+  // Initialize Analytics only on client side
+  if (typeof window !== 'undefined') {
+    analytics = getAnalytics(app);
+  }
+} catch (error) {
+  console.error("Firebase initialization error:", error);
+  // Provide fallback or empty objects to prevent app from crashing
+  app = null;
+  auth = null;
+  db = null;
+  storage = null;
 }
 
 export { app, auth, db, storage, analytics }; 
