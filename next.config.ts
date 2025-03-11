@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   images: {
     unoptimized: true,
   },
@@ -14,6 +13,13 @@ const nextConfig = {
   typescript: {
     // Only run type checking on local development, not during builds
     ignoreBuildErrors: true,
+  },
+  // Set dynamic rendering for pages that use searchParams
+  experimental: {
+    // This allows pages with dynamic data to be built
+    outputFileTracingIncludes: {
+      '/games': ['**/*'],
+    },
   },
 };
 

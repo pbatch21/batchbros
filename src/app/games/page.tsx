@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description: "Browse our complete collection of games from both Paul and Will. Find your next favorite game!",
 };
 
+// Force dynamic rendering for this page
+export const dynamic = 'force-dynamic';
+
 // This is a server component that will fetch data at request time
 export default async function GamesPage({
   searchParams,

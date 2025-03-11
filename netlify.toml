@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "NEXT_PUBLIC_FIREBASE_API_KEY=dummy-key-for-build npm run build"
   publish = ".next"
 
 [[plugins]]
