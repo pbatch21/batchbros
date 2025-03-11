@@ -16,7 +16,7 @@ export default function Home() {
                 Welcome to <span className="text-blue-400">Batch Bros Games</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Discover the ultimate collection of games from Paul and Will. Play, compete, and have fun!
+                A collection of awesome games curated by Paul and Will. No corporate nonsense, just fun!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/pauls-games">
@@ -49,13 +49,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section - More casual and authentic */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Batch Bros Games?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What We're About</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer a unique gaming experience with carefully curated collections from Paul and Will.
+              Just two bros who love games and wanted to share our favorites with you. No fancy marketing speak here!
             </p>
           </div>
           
@@ -67,9 +67,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Instant Play</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Play Right Away</h3>
               <p className="text-gray-600">
-                No downloads required. Play all our games directly in your browser without any installation.
+                No downloads, no installs, no nonsense. Just click and start playing in your browser.
               </p>
             </div>
             
@@ -79,9 +79,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Multiplayer Support</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Play With Friends</h3>
               <p className="text-gray-600">
-                Compete with friends or players around the world with our multiplayer games and leaderboards.
+                Challenge your buddies or make new ones. Many of our games let you compete with others.
               </p>
             </div>
             
@@ -91,22 +91,22 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Customizable Experience</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Make It Yours</h3>
               <p className="text-gray-600">
-                Create an account to track your progress, save favorites, and customize your gaming experience.
+                Create an account if you want to save favorites and track your progress. Totally optional though!
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Game Categories Section */}
+      {/* Game Collections Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Explore Our Game Collections</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Collections</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover games curated by Paul and Will, each with their unique style and gameplay.
+              We each have our own style and taste in games. Check out our personal collections!
             </p>
           </div>
           
@@ -117,11 +117,11 @@ export default function Home() {
                 <div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">Paul's Games</h3>
                   <p className="text-white/80 mb-6">
-                    A collection of action-packed and strategy games curated by Paul. Test your skills and reflexes!
+                    Action-packed and strategy games that'll get your heart racing and brain working.
                   </p>
                 </div>
                 <Link href="/pauls-games" className="inline-flex items-center text-white font-medium group">
-                  Explore Collection
+                  Check 'em out
                   <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -133,11 +133,11 @@ export default function Home() {
                 <div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">Will's Games</h3>
                   <p className="text-white/80 mb-6">
-                    Dive into Will's collection of puzzle and adventure games. Challenge your mind and creativity!
+                    Puzzles and adventures that'll challenge your mind and take you on a journey.
                   </p>
                 </div>
                 <Link href="/wills-games" className="inline-flex items-center text-white font-medium group">
-                  Explore Collection
+                  Take a look
                   <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -151,19 +151,19 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/cta-pattern.svg')] opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Playing?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Play?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of players already enjoying Batch Bros Games. Sign up for free and start playing today!
+              Jump in and start playing right now, or create an account to save your progress.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/signup">
                 <Button size="lg">
-                  Sign Up Now
+                  Create Account
                 </Button>
               </Link>
               <Link href="/games">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  Browse All Games
+                  Browse Games
                 </Button>
               </Link>
             </div>
