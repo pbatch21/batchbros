@@ -16,9 +16,9 @@ export default async function GamesPage({
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
   // Get filter parameters from URL - properly handle as properties
-  const category = typeof searchParams.category === 'string' ? searchParams.category : undefined;
-  const featured = searchParams.featured === 'true';
-  const tag = typeof searchParams.tag === 'string' ? searchParams.tag : undefined;
+  const category = searchParams?.category ? String(searchParams.category) : undefined;
+  const featured = searchParams?.featured === 'true';
+  const tag = searchParams?.tag ? String(searchParams.tag) : undefined;
   
   // In a real app, this would fetch from Firebase
   // For now, we'll combine the mock data from both Paul's and Will's games
