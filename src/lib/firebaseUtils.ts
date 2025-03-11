@@ -9,7 +9,6 @@ import {
   limit, 
   addDoc, 
   updateDoc, 
-  deleteDoc, 
   increment, 
   Timestamp 
 } from 'firebase/firestore';

@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import GameCard from '@/components/ui/GameCard';
-import { getGames } from '@/lib/firebaseUtils';
 import { Game } from '@/types';
 
 export const metadata: Metadata = {
@@ -15,7 +14,7 @@ export default async function GamesPage({
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  // Get filter parameters from URL - properly handle as properties
+  // Get filter parameters from URL - properly handle as async properties
   const category = searchParams?.category ? String(searchParams.category) : undefined;
   const featured = searchParams?.featured === 'true';
   const tag = searchParams?.tag ? String(searchParams.tag) : undefined;

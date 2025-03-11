@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import GameCard from '@/components/ui/GameCard';
-import { getGames } from '@/lib/firebaseUtils';
 import { Game } from '@/types';
 
 export const metadata: Metadata = {
